@@ -1,0 +1,76 @@
+# Git
+.git
+.gitignore
+.gitmodules
+.github
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+htmlcov/
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+.*.swp
+.*.swo
+
+# Logs and databases
+*.log
+logs/
+*.sqlite
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+docker-compose.override.yml
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.whl
+*.tar.gz
+
+# Dependencies
+node_modules/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Workspace directories (будут созданы отдельно)
+coding_workspace/
+workspace/
