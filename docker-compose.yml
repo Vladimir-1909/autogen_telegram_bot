@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  agent_bot:
+    build: .
+    container_name: autogen_telegram_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./workspace:/app/workspace
+      - ./logs:/app/logs
+      - ./cache:/app/cache
+      - ./.cache:/app/.cache
+    ports:
+      - "${PORT:-8080}:${PORT:-8080}"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
